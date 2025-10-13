@@ -1,12 +1,18 @@
-import logo from "./assets/Logo .svg";
+// src/Header.js
+import logo from "./assets/Logo.svg";
+import Nav from "./Nav";
 
-function Header() {
-    return (
-        <header>
-            <img src={logo} alt="Little Lemon Logo" />
-            <h1>Little Lemon Restaurant</h1>
-        </header>
-    );
+export default function Header() {
+  return (
+    <header className="header">
+      <div className="header-grid container">
+        <a href="/" className="logo">
+          <img src={logo} alt="Little Lemon logo" />
+        </a>
+
+        {/* Nav lives inside the header */}
+        <Nav />
+      </div>
+    </header>
+  );
 }
-
-export default Header;
