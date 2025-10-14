@@ -321,3 +321,95 @@ footer a:hover { text-decoration: underline; }
   .cards { grid-template-columns: 1fr; }
   footer .grid { grid-template-columns: 1fr; }
 }
+
+/* ============ NAV active state ============ */
+.header nav a.active {
+  color: var(--green);
+}
+.header nav a.active::after {
+  width: 100%;
+}
+
+/* ============ Utilities ============ */
+.muted { color: #6b7280; }          /* subtle gray text */
+.mb-2  { margin-bottom: 1rem; }
+.btn   { display:inline-block; padding:.7rem 1.1rem; border-radius:12px; border:0; cursor:pointer; }
+.btn--primary { background: var(--yellow); color:#000; font-weight:800; }
+
+/* ============ Testimonials ============ */
+.testimonials { padding: 3rem 0; }
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.testimonial {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+}
+.testimonial .stars { color: #f5a623; font-size: 1rem; margin-bottom: .4rem; }
+.testimonial .person {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: .6rem;
+  align-items: center;
+  margin-bottom: .25rem;
+}
+.testimonial .avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--offwhite);
+  display: grid; place-items: center;
+  font-weight: 700; color: var(--green);
+}
+
+/* Responsive for testimonials */
+@media (max-width: 992px) { .testimonial-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 560px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
+/* ============ About / Chicago section ============ */
+.about {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem 0;
+}
+.about-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.about-photos img {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+@media (max-width: 880px){
+  .about { grid-template-columns: 1fr; }
+  .about-photos { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============ Booking form ============ */
+.booking-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 420px;
+}
+.booking-form label {
+  display: grid;
+  gap: .4rem;
+  font-weight: 700;
+}
+.booking-form input, .booking-form select {
+  padding: .6rem .7rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font: inherit;
+}
+
+/* Small polish for cards */
+.card { transition: transform .15s ease, box-shadow .15s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,.08); }
