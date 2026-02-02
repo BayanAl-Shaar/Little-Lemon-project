@@ -1,16 +1,15 @@
 // src/Header.js
 import logo from "./assets/Logo.svg";
 import Nav from "./Nav";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <header className="header">
       <div className="header-grid container">
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <img src={logo} alt="Little Lemon logo" />
-        </a>
-
-        {/* Nav lives inside the header */}
+        </Link>
         <Nav />
       </div>
     </header>
