@@ -10,9 +10,9 @@ export default function BookingPage({ availableTimes, dispatch, submitForm }) {
       style={{ padding: "3rem 0" }}
       aria-labelledby="booking-heading"
     >
-      <h2 id="booking-heading" style={{textAlign: "center", marginBottom: "2rem"}}>
+      <h1 id="booking-heading" style={{textAlign: "center", marginBottom: "2rem"}}>
         Reserve a Table
-      </h2>
+      </h1>
 
       <BookingForm
         availableTimes={availableTimes}

@@ -10,7 +10,7 @@ export default function Footer() {
         </section>
 
         <section>
-          <h4>Doormat Navigation</h4>
+          <h3>Doormat Navigation</h3>
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
@@ -31,7 +31,7 @@ export default function Footer() {
         </section>
 
         <section>
-          <h4>Social Media</h4>
+          <h3>Social Media</h3>
           <ul>
             <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             <li><a href="https://www.facebook.com"  target="_blank" rel="noopener noreferrer">Facebook</a></li>

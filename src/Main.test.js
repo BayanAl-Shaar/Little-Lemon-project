@@ -1,6 +1,7 @@
 // Mock the api module
 jest.mock('./api', () => ({
   submitAPI: jest.fn(),
+  fetchData: () => ['17:00', '18:00', '19:00'],
 }));
 
 // Mock the Main module

@@ -4,9 +4,9 @@ import chef2 from "../../assets/lemon-dessert.jpg";
 
 export default function Chicago() {
   return (
-    <section className="container about">
+    <section className="container about" aria-labelledby="about-heading">
       <div className="about-text">
-        <h2>Little Lemon</h2>
+        <h2 id="about-heading">Little Lemon</h2>
         <h3>Chicago</h3>
         <p>
           Little Lemon is run by two Italian brothers, Mario and Adrian, who

@@ -33,9 +33,9 @@ const specials = [
 
 export default function Specials() {
   return (
-    <section className="container specials">
+    <section className="container specials" aria-labelledby="specials-heading">
       <div className="head">
-        <h2>This weeks specials!</h2>
+        <h2 id="specials-heading">This weeks specials!</h2>
         <button className="btn" type="button">Online Menu</button>
       </div>
 
@@ -48,7 +48,7 @@ export default function Specials() {
                 {item.title} <span className="price">{item.price}</span>
               </h4>
               <p>{item.description}</p>
-              <Link to="/order">Order a delivery 🛵</Link>
+              <Link to="/order" aria-label="Order a delivery">Order a delivery 🛵</Link>
             </div>
           </article>
         ))}
