@@ -7,7 +7,7 @@ export default function CallToAction() {
     <section className="hero">
       <div className="container grid">
         <div>
-          <h1>Little Lemon</h1>
+          <h1>Little Lemon Bayan</h1>
           <h3>Chicago</h3>
           <p>
             We are a family owned Mediterranean restaurant, focused on
