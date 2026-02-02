@@ -6,6 +6,19 @@ import ConfirmedBooking from "./ConfirmedBooking";
 import { initializeTimes, updateTimes } from "./timesReducer";
 import { submitAPI } from "./api";
 
+const submitForm = (formData, navigate) => {
+  const success = submitAPI(formData);
+
+  if (success) {
+    // Write the booking to local storage so it persists
+    localStorage.setItem("bookings", JSON.stringify(formData));
+    // Navigate to the confirmation page
+    navigate("/confirmed");
+  }
+};
+
+export { submitForm };
+
 export default function Main() {
   const [availableTimes, dispatch] = useReducer(
     updateTimes,
@@ -15,15 +28,8 @@ export default function Main() {
 
   const navigate = useNavigate();
 
-  const submitForm = (formData) => {
-    const success = submitAPI(formData);
-
-    if (success) {
-      // Write the booking to local storage so it persists
-      localStorage.setItem("bookings", JSON.stringify(formData));
-      // Navigate to the confirmation page
-      navigate("/confirmed");
-    }
+  const handleSubmitForm = (formData) => {
+    submitForm(formData, navigate);
   };
 
   return (
@@ -36,7 +42,7 @@ export default function Main() {
             <BookingPage
               availableTimes={availableTimes}
               dispatch={dispatch}
-              submitForm={submitForm}
+              submitForm={handleSubmitForm}
             />
           }
         />
