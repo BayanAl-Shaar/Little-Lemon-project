@@ -11,8 +11,8 @@ export default function Nav() {
         <li><NavLink to="/about" className={linkClass}>About</NavLink></li>
         <li><NavLink to="/menu" className={linkClass}>Menu</NavLink></li>
         <li><NavLink to="/booking" className={linkClass}>Reservations</NavLink></li>
-        <li><NavLink to="/order" className={linkClass}>Order Online</NavLink></li>
-        <li><NavLink to="/login" className={linkClass}>Login</NavLink></li>
+        {/*<li><NavLink to="/order" className={linkClass}>Order Online</NavLink></li>
+        <li><NavLink to="/login" className={linkClass}>Login</NavLink></li>*/}
       </ul>
     </nav>
   );
